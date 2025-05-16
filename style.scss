@@ -4,6 +4,7 @@
 @mixin rightCorner(){
     position:absolute;
     bottom: 0;
+    right: 0;
 }
 
 @mixin sizeSize(){
@@ -16,11 +17,11 @@
     justify-content: center;
 }
 
-@mixin circle($size, $bg-color: #97f7e2){  //$bg-color: ##e997f7 würde eine Art Default-Wert sein, wenn keine Übergabe erfolgt ist
+@mixin circle($size,$max, $bg-color: #97f7e2){  //$bg-color: ##e997f7 würde eine Art Default-Wert sein, wenn keine Übergabe erfolgt ist
     width: $size;
     height: $size;
-    max-width: $size;
-    max-height: $size;
+    max-width: $max;
+    max-height: $max;
     background-color: $bg-color;
     border-radius: 50%; 
 }
@@ -112,6 +113,6 @@ h1 {
 }
 
 .circle {
-    @include circle(45vw, #82e6d0); //solange keine Farbe übergeben wird, gilt der Default
+    @include circle(45vw, 100px, #82e6d0); //solange keine Farbe übergeben wird, gilt der Default
     @include rightCorner();
 }
