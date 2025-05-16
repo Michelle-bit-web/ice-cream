@@ -1,0 +1,40 @@
+$main-color: #F7CA97;
+
+@font-face {
+    font-family: 'Creamine';
+    src: url(./assets/fonts/creamine/CreamineDemoRegular.ttf) format('truetype');
+}
+
+@mixin rightCorner(){
+    position:absolute;
+    bottom: 0;
+}
+
+@mixin circle($size){
+    width: $size;
+    height: $size;
+    background-color: #f7ad97;
+    border-radius: 50%; 
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 { 
+    color: $main-color;
+    font-family: 'Creamine';
+    text-align: center;
+    font-size: 10vw;
+}
+
+.img-icecream {
+    @include rightCorner();
+}
+
+.circle {
+    @include circle(45vw);
+    @include rightCorner();
+}

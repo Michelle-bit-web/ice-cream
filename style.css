@@ -1,3 +1,30 @@
+@font-face {
+  font-family: "Creamine";
+  src: url(./assets/fonts/creamine/CreamineDemoRegular.ttf) format("truetype");
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1 {
   color: #F7CA97;
+  font-family: "Creamine";
+  text-align: center;
+  font-size: 10vw;
+}
+
+.img-icecream {
+  position: absolute;
+  bottom: 0;
+}
+
+.circle {
+  width: 45vw;
+  height: 45vw;
+  background-color: #f7ad97;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */
