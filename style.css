@@ -43,11 +43,38 @@ h1 {
   position: absolute;
   left: 100px;
   font-size: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-color {
   color: #c943e1;
   font-family: "Miskan Oblique";
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.button {
+  background-color: white;
+  border: unset;
+  height: 6vw;
+  min-width: 12vw;
+  font-size: 2vw;
+  padding: 0px 16px;
+  border-radius: 20px;
+  font-family: "Miskan Oblique";
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #c943e1;
+  color: white;
 }
 
 .img-icecream {
