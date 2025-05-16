@@ -2,6 +2,29 @@
   font-family: "Creamine";
   src: url(./assets/fonts/creamine/CreamineDemoRegular.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Miskan Oblique";
+  src: url(./assets/fonts/miskan/Miskan.ttf) format("truetype");
+}
+body {
+  background-color: #5fd8be;
+  font-family: "Creamine";
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 3vw;
+  margin-left: 2vw;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -9,10 +32,22 @@
 }
 
 h1 {
-  color: #F7CA97;
+  color: #c943e1;
   font-family: "Creamine";
   text-align: center;
-  font-size: 10vw;
+  font-size: 12vw;
+}
+
+.main-text {
+  color: white;
+  position: absolute;
+  left: 100px;
+  font-size: 6vw;
+}
+
+.main-color {
+  color: #c943e1;
+  font-family: "Miskan Oblique";
 }
 
 .img-icecream {
@@ -23,7 +58,9 @@ h1 {
 .circle {
   width: 45vw;
   height: 45vw;
-  background-color: #f7ad97;
+  max-width: 45vw;
+  max-height: 45vw;
+  background-color: #82e6d0;
   border-radius: 50%;
   position: absolute;
   bottom: 0;

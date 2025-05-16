@@ -1,20 +1,48 @@
-$main-color: #F7CA97;
+$main-color: #c943e1;
+$bg-color: #5fd8be;
 
 @font-face {
     font-family: 'Creamine';
     src: url(./assets/fonts/creamine/CreamineDemoRegular.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'Miskan Oblique';
+    src: url(./assets/fonts/miskan/Miskan.ttf) format('truetype');
+}
+
+
 @mixin rightCorner(){
     position:absolute;
     bottom: 0;
 }
 
-@mixin circle($size){
+@mixin circle($size, $bg-color: #97f7e2){  //$bg-color: ##e997f7 würde eine Art Default-Wert sein, wenn keine Übergabe erfolgt ist
     width: $size;
     height: $size;
-    background-color: #f7ad97;
+    max-width: $size;
+    max-height: $size;
+    background-color: $bg-color;
     border-radius: 50%; 
+}
+
+body {
+  background-color: $bg-color;
+  font-family: 'Creamine';
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 3vw;
+    margin-left: 2vw;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .content {
@@ -27,7 +55,19 @@ h1 {
     color: $main-color;
     font-family: 'Creamine';
     text-align: center;
-    font-size: 10vw;
+    font-size: 12vw;
+}
+
+.main-text {
+    color: white;
+    position: absolute;
+    left: 100px;
+    font-size: 6vw;
+}
+
+.main-color {
+    color: $main-color;
+    font-family: 'Miskan Oblique';
 }
 
 .img-icecream {
@@ -35,6 +75,6 @@ h1 {
 }
 
 .circle {
-    @include circle(45vw);
+    @include circle(45vw, #82e6d0); //solange keine Farbe übergeben wird, gilt der Default
     @include rightCorner();
 }
