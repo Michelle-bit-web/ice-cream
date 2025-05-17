@@ -24,6 +24,11 @@ body {
   font-family: "Creamine";
   padding: 5%;
 }
+@media (max-height: 400px) {
+  body {
+    padding: 2%;
+  }
+}
 
 header {
   display: flex;
@@ -58,12 +63,23 @@ nav {
     margin-top: 5%;
   }
 }
+@media (max-height: 400px) {
+  .content {
+    height: 70vh;
+    justify-content: flex-start;
+  }
+}
 
 h1 {
   font-size: clamp(32px, 10vw, 120px);
   color: #c943e1;
   font-family: "Creamine";
   text-align: center;
+}
+@media (max-height: 400px) {
+  h1 {
+    font-size: 65px;
+  }
 }
 
 .main-text {
@@ -72,6 +88,11 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-height: 400px) {
+  .main-text {
+    font-size: 60px;
+  }
 }
 
 .main-color {
