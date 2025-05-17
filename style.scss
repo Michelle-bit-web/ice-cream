@@ -1,118 +1,137 @@
-@use "scss/company-colors";
+@use "scss/company-colors"; //@import erzeugt globale Variablen - können dann direkt genutzt werden
 @use "scss/fonts";
 
-@mixin rightCorner(){
-    position:absolute;
-    bottom: 0;
-    right: 0;
+@mixin rightCorner() {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-@mixin sizeSize(){
-    font-size: 10vw;
+@mixin size() {
+  font-size: clamp(32px, 10vw, 120px);
+}
+
+@mixin circle($size, $max, $bg-color: #97f7e2) {
+  //$bg-color: ##e997f7 würde eine Art Default-Wert sein, wenn keine Übergabe erfolgt ist
+  width: $size;
+  height: $size;
+  max-width: $max;
+  max-height: $max;
+  background-color: $bg-color;
+  border-radius: 50% 0 0 0;
+}
+
+.no-margin {
+  margin: 0;
 }
 
 .center-all {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin circle($size,$max, $bg-color: #97f7e2){  //$bg-color: ##e997f7 würde eine Art Default-Wert sein, wenn keine Übergabe erfolgt ist
-    width: $size;
-    height: $size;
-    max-width: $max;
-    max-height: $max;
-    background-color: $bg-color;
-    border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body {
-  background-color: $bg-color;
-  font-family: 'Creamine';
-}
-
-a {
-    text-decoration: none;
-    color: $second-color;
-    font-size: 3vw;
-    margin: 0 2vw;
+  @extend .no-margin;
+  box-sizing: border-box;
+  height: 100vh;
+  position: relative;
+  background-color: company-colors.$bg-color;
+  font-family: "Creamine";
+  padding: 5%;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: company-colors.$second-color;
+  font-size: 3vw;
+  margin: 0 2%;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
 }
 
-h1 { 
-    color: $main-color;
-    font-family: 'Creamine';
-    text-align: center;
-    font-size: 12vw;
+h1 {
+  @extend .no-margin;
+  @include size();
+  color: company-colors.$main-color;
+  font-family: "Creamine";
+  text-align: center;
 }
 
 .main-text {
-    color: $second-color;
-    position: absolute;
-    left: 100px;
-    width: 60%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include sizeSize();
+  @include size();
+  color: company-colors.$second-color;
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-color {
-    color: $main-color;
-    font-family: 'Miskan Oblique';
+  color: company-colors.$main-color;
+  font-family: "Miskan Oblique";
 }
 
 .btn-container {
-    @extend .center-all;
-    gap: 16px;
-    margin-top: 32px;
+  @extend .center-all;
+  gap: 16px;
+  margin-top: 32px;
 }
 
 .button {
-    background-color: $second-color;
-    border: unset;
-    height: 6vw;
-    min-width: 12vw;
-    font-size: 2vw;
-    padding: 0px 16px; 
-    border-radius: 20px;
-    font-family: 'Miskan Oblique';
+  background-color: company-colors.$second-color;
+  border: unset;
+  height: 6vw;
+  min-width: 12vw;
+  font-size: 2vw;
+  padding: 0px 16px;
+  border-radius: 20px;
+  font-family: "Miskan Oblique";
 
-    &:hover {
-        cursor: pointer;
-        background-color: $main-color;
-        color: $second-color;
-        scale: 0.9;
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: company-colors.$main-color;
+    color: company-colors.$second-color;
+    scale: 0.9;
+  }
 }
 
 .button-main {
-    @extend .button;
-     background-color: $main-color;
-     color: $second-color;
-    &:hover {
-        background-color:  #12c69f;
-    }
+  @extend .button;
+  background-color: company-colors.$main-color;
+  color: company-colors.$second-color;
+  &:hover {
+    background-color: #12c69f;
+  }
 }
 
 .img-icecream {
-    @include rightCorner();
+  @include rightCorner();
+  @include circle(80%, 20vh, #82e6d0);
+  border-radius: 20px;
 }
 
 .circle {
-    @include circle(45vw, 100px, #82e6d0); //solange keine Farbe übergeben wird, gilt der Default
-    @include rightCorner();
+  @include circle(100%, 25vh, #82e6d0); //solange keine Farbe übergeben wird, gilt der Default
+  @include rightCorner();
 }

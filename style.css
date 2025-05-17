@@ -6,6 +6,10 @@
   font-family: "Miskan Oblique";
   src: url(./assets/fonts/miskan/Miskan.ttf) format("truetype");
 }
+.no-margin, h1, body {
+  margin: 0;
+}
+
 .center-all, .btn-container {
   display: flex;
   align-items: center;
@@ -13,47 +17,57 @@
 }
 
 body {
+  box-sizing: border-box;
+  height: 100vh;
+  position: relative;
   background-color: #5fd8be;
   font-family: "Creamine";
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  font-size: 3vw;
-  margin: 0 2vw;
+  padding: 5%;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 3vw;
+  margin: 0 2%;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin-top: 5%;
 }
 
 h1 {
+  font-size: clamp(32px, 10vw, 120px);
   color: #c943e1;
   font-family: "Creamine";
   text-align: center;
-  font-size: 12vw;
 }
 
 .main-text {
+  font-size: clamp(32px, 10vw, 120px);
   color: white;
-  position: absolute;
-  left: 100px;
   width: 60%;
   height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 10vw;
 }
 
 .main-color {
@@ -94,15 +108,24 @@ h1 {
 .img-icecream {
   position: absolute;
   bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 80%;
+  max-width: 20vh;
+  max-height: 20vh;
+  background-color: #82e6d0;
+  border-radius: 50% 0 0 0;
+  border-radius: 20px;
 }
 
 .circle {
-  width: 45vw;
-  height: 45vw;
-  max-width: 45vw;
-  max-height: 45vw;
+  width: 100%;
+  height: 100%;
+  max-width: 25vh;
+  max-height: 25vh;
   background-color: #82e6d0;
-  border-radius: 50%;
+  border-radius: 50% 0 0 0;
   position: absolute;
   bottom: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
