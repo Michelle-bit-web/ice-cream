@@ -53,15 +53,15 @@ To view or edit the project in Visual Studio Code:
 
 ## Project Structure
 
-ice-cream/
-├── index.html
-├── readme.md
-├── style.css
-├── style.css.map
-├── style.scss
-├── assets/
-│   └── (fonts, images)
-├── scss/
+ice-cream/<br>
+├── index.html<br>
+├── readme.md<br>
+├── style.css<br>
+├── style.css.map<br>
+├── style.scss<br>
+├── assets/<br>
+│   └── (fonts, images)<br>
+├── scss/<br>
 │   └── (scss/_company-colors, scss/_fonts)
 
 ## 🤝 Contributing
