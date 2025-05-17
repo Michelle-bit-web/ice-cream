@@ -6,7 +6,7 @@ This project is a website design for selling ice cream. The site features a vibr
 
 ## Demo
 
-Live demo: [Go and hunt!](https://michelle-bit-web.github.io/ice-cream)
+Live demo: [Lets check it out!](https://michelle-bit-web.github.io/ice-cream)
 
 ## 🪄 Features
 
