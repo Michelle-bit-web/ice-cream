@@ -65,8 +65,12 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 50vh;
   width: 100%;
-  margin-top: 5%;
+   @media (min-width: 900px) {
+    margin-top: clamp(2%, 5%, 10%);  
+    }
 }
 
 h1 {
@@ -80,12 +84,11 @@ h1 {
 .main-text {
   @include size();
   color: company-colors.$second-color;
-  width: 60%;
-  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 .main-color {
   color: company-colors.$main-color;
